@@ -24,6 +24,35 @@ p {
     margin-left: 0rem;
 }
 
+/* Contact Form */
+form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color: #65481f;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #333;
+  }
+  
 /* Navigation Bar */
 nav, #navbar-example2 {
     position: sticky;

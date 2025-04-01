@@ -61,7 +61,7 @@
     <div class="container">
         <div class="d-flex flex-column align-items-center">
             <img src="hero-intro.png" alt="Hero" class="mb-3">
-            <h1>Hi, I'm Allysa Khae Repeso</h1>
+            <h1>Hi, I'm Allysa</h1>
             <p class="lead">
                 An aspiring IT professional with a strong passion for web development and design, eager to create visually stunning and highly functional digital experiences. Continuously learning and exploring new technologies to enhance skills, build innovative projects, and contribute to the ever-evolving world of technology.
             </p>
@@ -73,7 +73,7 @@
 
 
     <!-- Sample Works and Live Projects -->
-    <div class="container">
+    <div class="container" id="samples">
         <div class="about">
             <div class="line">            
                 <div class="text-center">
@@ -88,7 +88,7 @@
                 <div class="gallery-item"><img src="gallery/4.jpg" alt="Photo 3"></div>
                 <div class="gallery-item"><img src="gallery/5.jpg" alt="Photo 4"></div>
             </section>
-            <h6 class="mt-3 text-center">Lovewell Foundation</h2>
+            <h6 class="mt-3 text-center">Graphic Design</h2>
             <section class="gallery sw-1">
                 <div class="gallery-item"><img src="gallery/sample-3.png" alt="Sample 1"></div>
                 <div class="gallery-item"><img src="gallery/sample-4.png" alt="Sample 2"></div>
@@ -239,11 +239,13 @@
                                                 <p>Five9 CRM</p>
                                                 <p>HubSpot</p>
                                                 <p>MailChimp</p>
+                                                <p>Notion</p>
                                             </div>
                                             <div class="col-lg-6">
                                                 <p>Dialer</p>
                                                 <p>Microsoft Office</p>
                                                 <p>GSuite</p>
+                                                <p>Formspree</p>
                                             </div>
                                         </div>
                                     </div>
@@ -343,13 +345,29 @@
 
             </div>
             <div class="text-center mt-4">
-                <a href="#works" class="btn btn-outline-dark">View My Work</a>
+                <a href="#samples" class="btn btn-outline-dark">View My Work</a>
             </div>
         </div>
             </div>
         </section>
         </div>
-        </div>
+            <div class="container mb-5">
+                <div class="row">
+            <iframe width="560" height="330" class="col" src="https://www.youtube.com/embed/5ZxsL2TWfac?si=Cix5FyYIyfroNRfU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="iframe col" width="560" height="315">
+                        <h3 class="text-center">About Me</h3>
+                        <p>Hi, I’m Allysa! I’m a detail-oriented Virtual Assistant with experience in customer service, administrative support, and graphic design. I’ve worked in client-facing roles as a Customer Service Representative and Appointment Setter, handling inbound and outbound calls, lead generation, and CRM management.
+                        
+                        In addition, I have strong administrative and creative skills, gained from my experience as a Student Assistant and General Virtual Assistant. I’ve managed social media content, document preparation, data entry, and graphic design for various clients.
+                        
+                        As an IT student, I’m tech-savvy and adaptable, with proficiency in Microsoft Office, Google Workspace, HubSpot, Five9 CRM, and design tools like Canva. I’m passionate about delivering high-quality work and helping businesses stay organized and efficient.
+                        
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>  
     </div>
 
     <!-- WORKS -->
@@ -410,16 +428,38 @@
         
         <p>Socials:</p>
         <a href="https://www.facebook.com/lyskhaer" class="text-light me-3"><i class="fa fa-facebook py-5" style="font-size:48px;color:rgb(251, 251, 251)"></i></a>
-        <a href="https://linkedin.com/in/allysakhaerepeso" class="text-light me-3"><i class="fa fa-linkedin-square" style="font-size:48px;color:rgb(251, 251, 251)"></i></a>
+        <a href="https://linkedin.com/in/allysarepeso" class="text-light me-3"><i class="fa fa-linkedin-square" style="font-size:48px;color:rgb(251, 251, 251)"></i></a>
         <a href="https://github.com/lyskh" class="text-light me-3"><i class="fa fa-github" style="font-size:48px;color:rgb(251, 251, 251)"></i></a>
 
+        <h6 class="mb-3">Let’s connect—I’d love to help bring value to your team!</h6>
+        <!-- Contact Form with reCAPTCHA -->
+        <form action="https://formspree.io/f/mblganbk" method="POST">
+        
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" placeholder="Write your message here..." rows="4" required></textarea>
+        
+            <!-- Formspree reCAPTCHA -->
+            <input type="hidden" name="_captcha" value="true">
+        
+            <!-- Redirect to a thank-you page after submission -->
+            <input type="hidden" name="_next" value="https://lyskh.github.io/thank-you.html">
+            
+            <button type="submit">Send Message</button>
+        </form>
+  
         <div class="footer-line mt-4 mb-4">
             <p><img src="footer.png" alt="Whale" style="width:270px;height:270px;margin-left:15px;">
                 “Character may be manifested in the great moments, but it is made in the small ones.” - Phillips Brooks</p>
         </div>
         <hr>
 
-        <p class="mt-5">&copy; 2025 Allysa Khae Repeso. All Rights Reserved.</p>
+        <p class="mt-5">&copy; 2025 Allysa. All Rights Reserved.</p>
 
         <button onclick="scrollToTop()" class="btn btn-outline-light mt-3">Back to Top</button>
         <p class="mt-3"></p>
