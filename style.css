@@ -111,7 +111,7 @@ section {
 
 .about {
     height: fit-content;
-    padding: 80px 0;
+    padding: 40px 0;
 }
 
 .about img {
@@ -189,7 +189,7 @@ footer a:hover {
 .iframe-container {
     width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     height: 600px; /* Adjust as needed */
     border: 2px solid #ddd;
     overflow: hidden;
