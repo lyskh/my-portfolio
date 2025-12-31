@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Contact.css';
+import footerImg from '../assets/footer.png';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -169,7 +170,7 @@ const Contact = () => {
         </form>
 
         <div className="footer-line mt-4 mb-4">
-          <img src="/footer.png" alt="Whale" className="footer-image" />
+          <img src={footerImg} alt="Whale" className="footer-image" />
           <p className="footer-quote">
             "Character may be manifested in the great moments, but it is made in the small ones." 
             - Phillips Brooks

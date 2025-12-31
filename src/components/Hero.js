@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import './Hero.css';
+import heroIntro from '../assets/hero-intro.png';
 
 const Hero = () => {
   const heroRef = useRef(null);
@@ -45,7 +46,7 @@ const Hero = () => {
       <div className="container">
         <div className="hero-content">
           <div className="hero-image">
-            <img src="/hero-intro.png" alt="Allysa" />
+            <img src={heroIntro} alt="Allysa" />
           </div>
           <h1>Hi, I'm Allysa</h1>
           <p className="lead">

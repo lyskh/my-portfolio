@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import './Gallery.css';
+import lineImg from '../assets/line.png';
 
 const Gallery = () => {
   const galleryRef = useRef(null);
@@ -62,7 +63,7 @@ const Gallery = () => {
     <section className="gallery-section" id="samples" ref={galleryRef}>
       <div className="container">
         <div className="section-divider">
-          <img src="/line.png" alt="Divider" />
+          <img src={lineImg} alt="Divider" />
         </div>
         
         <h1 className="section-title">Sample Works and Photographs</h1>
@@ -86,7 +87,7 @@ const Gallery = () => {
         </div>
 
         <div className="section-divider">
-          <img src="/line.png" alt="Divider" />
+          <img src={lineImg} alt="Divider" />
         </div>
 
         <h1 className="section-title">Live Sites</h1>

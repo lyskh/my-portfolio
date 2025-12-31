@@ -130,16 +130,17 @@ const About = () => {
         <div className="container info">
           <h1 className="text-center card-title mb-4">About Me</h1>
           <div className="about-content">
-            <p className="text-justify h4">
+            <p className="text-center h4">
               I’m an IT professional with a strong passion for web development, UX/UI design, and cybersecurity. I have hands-on experience working with both front-end and back-end technologies, and I enjoy building clean, functional, and user-friendly websites that prioritize usability, performance, and accessibility. I’m particularly interested in creating digital experiences that are not only visually appealing but also intuitive and secure.
             </p>
-            <p className="text-justify h4">
+            <div className="text-center mb-4 mt-4">
+              <p className="text-center h4">
                 Beyond technical skills, I bring a strong background in communication and client-facing roles. As a Customer Service Representative and Appointment Setter, I developed excellent verbal and written communication skills, attention to detail, and the ability to solve problems efficiently in fast-paced environments. These roles strengthened my ability to understand user needs and translate them into effective solutions.
               </p>
-              <p className="text-justify h4">
-                I also worked as a Student Assistant, where I supported administrative operations, managed social media content, and provided basic technical assistance. This experience improved my organizational skills, adaptability, and ability to work collaboratively with different teams. I’m eager to continue growing as a developer by building real-world projects, learning new technologies, and contributing to meaningful digital solutions. 
-                  I like writing, listening to music, playing video games, singing, and making 2D animations as a practice.
+              <p className="text-center h4">
+                I also worked as a Student Assistant, where I supported administrative operations, managed social media content, and provided basic technical assistance. This experience improved my organizational skills, adaptability, and ability to work collaboratively with different teams. I’m eager to continue growing as a developer by building real-world projects, learning new technologies, and contributing to meaningful digital solutions.
                 </p>
+            </div>
             <hr />
 
             <div className="skills-section mb-4">
