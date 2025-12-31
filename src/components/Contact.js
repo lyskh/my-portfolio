@@ -45,22 +45,8 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // basic client-side sanitization to prevent injected HTML/script
-    const sanitize = (str) => {
-      if (!str) return '';
-      return String(str).replace(/<[^>]*>/g, '').trim();
-    };
-
     const form = e.target;
-    const formDataToSend = new FormData();
-    formDataToSend.append('name', sanitize(formData.name));
-    formDataToSend.append('email', sanitize(formData.email));
-    formDataToSend.append('message', sanitize(formData.message));
-    // include hidden fields expected by Formspree
-    const hiddenCaptcha = form.querySelector('input[name="_captcha"]');
-    const hiddenNext = form.querySelector('input[name="_next"]');
-    if (hiddenCaptcha) formDataToSend.append('_captcha', sanitize(hiddenCaptcha.value));
-    if (hiddenNext) formDataToSend.append('_next', sanitize(hiddenNext.value));
+    const formDataToSend = new FormData(form);
 
     try {
       const response = await fetch(form.action, {

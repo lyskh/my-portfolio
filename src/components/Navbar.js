@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -14,17 +13,27 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // navigation now uses route Links; helper left for in-page fallbacks
-  const closeMenu = () => setIsOpen(false);
-
-  const location = useLocation();
+  const handleNavClick = (e, targetId) => {
+    e.preventDefault();
+    setIsOpen(false);
+    const element = document.getElementById(targetId);
+    if (element) {
+      const offset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
 
   return (
-    <nav className={`navbar ${scrolled ? 'scrolled' : ''} ${location.pathname === '/services' ? 'services-route' : ''}`}>
+    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container">
-        <Link to="/" className="navbar-brand" onClick={closeMenu}>
+        <a href="#intro" className="navbar-brand" onClick={(e) => handleNavClick(e, 'intro')}>
           Allysa
-        </Link>
+        </a>
         <button 
           className={`navbar-toggler ${isOpen ? 'active' : ''}`}
           onClick={() => setIsOpen(!isOpen)}
@@ -37,34 +46,24 @@ const Navbar = () => {
         <div className={`navbar-collapse ${isOpen ? 'show' : ''}`}>
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link className="nav-link" to="/" onClick={closeMenu}>
+              <a className="nav-link" href="#intro" onClick={(e) => handleNavClick(e, 'intro')}>
                 Intro
-              </Link>
+              </a>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/about" onClick={closeMenu}>
+              <a className="nav-link" href="#about" onClick={(e) => handleNavClick(e, 'about')}>
                 About Me
-              </Link>
+              </a>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/works" onClick={closeMenu}>
+              <a className="nav-link" href="#works" onClick={(e) => handleNavClick(e, 'works')}>
                 Works
-              </Link>
+              </a>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/gallery" onClick={closeMenu}>
-                Gallery
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/contact" onClick={closeMenu}>
+              <a className="nav-link" href="#contact" onClick={(e) => handleNavClick(e, 'contact')}>
                 Contact
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/services" onClick={closeMenu}>
-                Services
-              </Link>
+              </a>
             </li>
           </ul>
         </div>
@@ -74,5 +73,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
 

@@ -28,4 +28,3 @@ if (Test-Path "gallery") {
 Write-Host "`nAsset copying completed!" -ForegroundColor Green
 Write-Host "You can now run 'npm install' and 'npm start'" -ForegroundColor Yellow
 
-

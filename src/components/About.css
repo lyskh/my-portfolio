@@ -764,23 +764,3 @@ hr {
     height: 250px;
   }
 }
-
-/* Emergency small-screen visibility guard for About route
-   Ensures content isn't hidden by overlay or animation on narrow viewports. */
-@media (max-width: 768px) {
-  .about-section {
-    /* make sure the section has room and is visible */
-    min-height: 100vh;
-    position: relative;
-    z-index: 1;
-    background-color: #ffffff;
-    opacity: 1 !important;
-    transform: none !important;
-  }
-
-  .about-content, .about-wrapper {
-    visibility: visible !important;
-    opacity: 1 !important;
-    transform: none !important;
-  }
-}

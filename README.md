@@ -112,4 +112,3 @@ The original color scheme has been preserved:
 
 © 2025 Allysa. All Rights Reserved.
 
-

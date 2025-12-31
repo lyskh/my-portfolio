@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
 import './About.css';
 import skillImg4 from '../assets/4.png';
 import skillImg1 from '../assets/1.png';
@@ -114,11 +113,17 @@ const About = () => {
     setExpandedAccordion(expandedAccordion === id ? null : id);
   };
 
-  const navigate = useNavigate();
-
   const scrollToSamples = () => {
-    // navigate to the works/gallery route
-    navigate('/works');
+    const element = document.getElementById('samples');
+    if (element) {
+      const offset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
   };
 
   const getProgressBarColor = (color) => {

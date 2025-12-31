@@ -92,25 +92,13 @@
     left: 0;
     width: 100%;
     background-color: #333;
-    /* use scale + opacity for smoother open/close animation */
-    transform-origin: top center;
-    transform: scaleY(0);
-    opacity: 0;
+    max-height: 0;
     overflow: hidden;
-    transition: transform 260ms cubic-bezier(.2,.9,.2,1), opacity 200ms ease-in-out;
+    transition: max-height 0.3s ease-in-out;
   }
 
   .navbar-collapse.show {
-    transform: scaleY(1);
-    opacity: 1;
-  }
-
-  .navbar-toggler span {
-    width: 25px;
-    height: 3px;
-    background-color: #d1b19d;
-    transition: transform 240ms ease-in-out, opacity 180ms ease-in-out, background-color 180ms ease-in-out;
-    backface-visibility: hidden;
+    max-height: 500px;
   }
 
   .navbar-nav {
@@ -122,23 +110,6 @@
   .nav-item {
     padding: 0.75rem 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  }
-}
-
-/* Reuse fadeInUp animation for navbar when on Services route */
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(12px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Only apply the fade animation for Services on larger screens; disable on small screens to avoid double animations */
-@media (min-width: 769px) {
-  .services-route .navbar-collapse.show {
-    animation: fadeInUp 0.45s ease both;
-  }
-
-  .services-route {
-    animation: fadeInUp 0.4s ease both;
   }
 }
 

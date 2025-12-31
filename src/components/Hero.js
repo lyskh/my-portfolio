@@ -1,11 +1,9 @@
 import React, { useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
 import './Hero.css';
 import heroIntro from '../assets/hero-intro.png';
 
 const Hero = () => {
   const heroRef = useRef(null);
-  const navigate = useNavigate();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -31,7 +29,16 @@ const Hero = () => {
   }, []);
 
   const scrollToWorks = () => {
-    navigate('/works');
+    const element = document.getElementById('works');
+    if (element) {
+      const offset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
   };
 
   return (
@@ -58,5 +65,4 @@ const Hero = () => {
 };
 
 export default Hero;
-
 

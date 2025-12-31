@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from 'react';
 import './Gallery.css';
 import lineDivider from '../assets/line.png';
 import photo1 from '../assets/1.jpg';
-import photo2 from '../assets/2.jpg';
 import photo3 from '../assets/3.jpg';
 import photo4 from '../assets/4.jpg';
 import photo5 from '../assets/5.jpg';
@@ -49,24 +48,15 @@ const Gallery = () => {
 
   const photos = [
     { src: photo1, alt: 'Photo 1' },
-    { src: photo2, alt: 'Photo 2' },
-    { src: photo3, alt: 'Photo 3' },
-    { src: photo4, alt: 'Photo 4' },
-    { src: photo5, alt: 'Photo 5' },
+    { src: photo3, alt: 'Photo 2' },
+    { src: photo4, alt: 'Photo 3' },
+    { src: photo5, alt: 'Photo 4' },
   ];
 
   const journalSamples = [
-    { src: sample1, alt: 'Sample 1' },
-    { src: sample2, alt: 'Sample 2' },
-    { src: sample3, alt: 'Sample 3' },
-    { src: sample4, alt: 'Sample 4' },
-    { src: sample5, alt: 'Sample 5' },
-    { src: sample6, alt: 'Sample 6' },
-    { src: sample7, alt: 'Sample 7' },
-    { src: sample8, alt: 'Sample 8' },
-    { src: sample9, alt: 'Sample 9' },
-    { src: sample10, alt: 'Sample 10' },
-    { src: sample11, alt: 'Sample 11' },
+    { src: sample8, alt: 'Sample 1' },
+    { src: sample10, alt: 'Sample 2' },
+    { src: sample11, alt: 'Sample 3' },
   ];
 
   const liveProjects = [
@@ -96,62 +86,22 @@ const Gallery = () => {
         
         <h1 className="section-title">Sample Works and Photographs</h1>
         
-        <h6 className="gallery-subtitle">Photographs</h6>
-
-        {/* Photos carousel (single-row) */}
-        <div className="carousel" aria-label="Photographs carousel">
-          <button className="carousel-control prev" aria-label="Previous" onClick={() => {
-            const track = document.getElementById('photos-track');
-            track && (track.scrollLeft -= track.clientWidth * 0.9);
-          }}>
-            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-              <path d="M15 18l-6-6 6-6" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </button>
-          <div className="carousel-track" id="photos-track">
-            {photos.map((photo, index) => (
-              <div key={index} className="carousel-item">
-                <img src={photo.src} alt={photo.alt} loading="lazy" />
-              </div>
-            ))}
-          </div>
-          <button className="carousel-control next" aria-label="Next" onClick={() => {
-            const track = document.getElementById('photos-track');
-            track && (track.scrollLeft += track.clientWidth * 0.9);
-          }}>
-            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-              <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </button>
+        <div className="gallery">
+          {photos.map((photo, index) => (
+            <div key={index} className="gallery-item">
+              <img src={photo.src} alt={photo.alt} loading="lazy" />
+            </div>
+          ))}
         </div>
 
-        <h6 className="gallery-subtitle">Graphic Design</h6>
+        <h6 className="gallery-subtitle">The Everything Journal</h6>
         
-        {/* Journal samples carousel (single-row) */}
-        <div className="carousel journal" aria-label="Sample works carousel">
-          <button className="carousel-control prev" aria-label="Previous sample" onClick={() => {
-            const track = document.getElementById('samples-track');
-            track && (track.scrollLeft -= track.clientWidth * 0.9);
-          }}>
-            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-              <path d="M15 18l-6-6 6-6" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </button>
-          <div className="carousel-track" id="samples-track">
-            {journalSamples.map((sample, index) => (
-              <div key={index} className="carousel-item">
-                <img src={sample.src} alt={sample.alt} loading="lazy" />
-              </div>
-            ))}
-          </div>
-          <button className="carousel-control next" aria-label="Next sample" onClick={() => {
-            const track = document.getElementById('samples-track');
-            track && (track.scrollLeft += track.clientWidth * 0.9);
-          }}>
-            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-              <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </button>
+        <div className="gallery journal-gallery">
+          {journalSamples.map((sample, index) => (
+            <div key={index} className="gallery-item">
+              <img src={sample.src} alt={sample.alt} loading="lazy" />
+            </div>
+          ))}
         </div>
 
         <div className="section-divider">
