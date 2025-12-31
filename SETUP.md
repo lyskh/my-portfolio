@@ -44,3 +44,4 @@ Copy-Item -Recurse gallery public\gallery -ErrorAction SilentlyContinue
 
 After moving the assets, you can run `npm install` and `npm start` to launch the development server.
 
+
