@@ -89,12 +89,22 @@ const About = () => {
     },
     {
       id: 3,
-      title: 'General Virtual Assistant (Freelance) | January 2025 – Present',
+      title: 'General Virtual Assistant (Freelance) | January – August 2025',
       icon: 'fa-book',
       details: [
         'Graphic Design – Create visually engaging graphics for social media using Canva.',
         'Data Entry & Organization – Format and organize documents for better readability and structure.',
         'Administrative Support – Help streamline workflows by managing files and ensuring document accuracy.'
+      ]
+    },
+        {
+      id: 4,
+      title: 'Appointment Setter (Dodoche) | April – October 2025',
+      icon: 'fa-calendar',
+      details: [
+        'Scheduled appointments for loan officers by managing outbound and follow-up calls.',
+        'Used GoHighLevel (GHL) CRM to update client records, track interactions, and monitor pipelines.',
+        'Delivered professional customer support, ensuring smooth communication between loan officers and prospects.'
       ]
     }
   ];
