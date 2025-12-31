@@ -29,16 +29,16 @@ const Gallery = () => {
   }, []);
 
   const photos = [
-    { src: '/gallery/1.jpg', alt: 'Photo 1' },
-    { src: '/gallery/3.jpg', alt: 'Photo 2' },
-    { src: '/gallery/4.jpg', alt: 'Photo 3' },
-    { src: '/gallery/5.jpg', alt: 'Photo 4' },
+    { src: '../assets/1.jpg', alt: 'Photo 1' },
+    { src: '../assets/3.jpg', alt: 'Photo 2' },
+    { src: '../assets/4.jpg', alt: 'Photo 3' },
+    { src: '../assets/5.jpg', alt: 'Photo 4' },
   ];
 
   const journalSamples = [
-    { src: '/gallery/sample-8.png', alt: 'Sample 1' },
-    { src: '/gallery/sample-10.png', alt: 'Sample 2' },
-    { src: '/gallery/sample-11.png', alt: 'Sample 3' },
+    { src: '../assets/sample-8.png', alt: 'Sample 1' },
+    { src: '../assets/sample-10.png', alt: 'Sample 2' },
+    { src: '../assets/sample-11.png', alt: 'Sample 3' },
   ];
 
   const liveProjects = [

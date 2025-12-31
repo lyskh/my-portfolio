@@ -31,14 +31,14 @@ const Projects = () => {
     {
       id: 1,
       title: 'Retail Inventory Management System',
-      image: '/work-1.png',
+      image: '../assets/work-1.png',
       description: 'I embarked on the development of a retail inventory system to streamline inventory management processes for businesses. The system is designed to support role-based access control, allowing Admins, Managers, Employees, and Customers to interact with the system based on their respective roles. Additionally, I incorporated Bootstrap and CSS for a visually appealing and responsive interface, alongside PHP and MySQL for robust backend functionality.',
       technologies: ['PHP', 'MySQL', 'Bootstrap', 'CSS', 'JavaScript']
     },
     {
       id: 2,
       title: 'SQLI Environment',
-      image: '/work-2.png',
+      image: '../assets/work-2.png',
       description: 'A development and testing of a purposefully vulnerable web application designed to demonstrate SQL injection vulnerabilities. SQL injection remains one of the most critical web application security risks, ranked third in the OWASP Top 10 2021. The application serves as an educational tool to understand how SQL injection attacks work, their potential impact, and the importance of implementing proper security measures.',
       note: 'Note: This application and all attack vectors presented are for educational purposes only and should never be implemented in production environments.',
       technologies: ['PHP', 'MySQL', 'HTML', 'CSS']
@@ -46,7 +46,7 @@ const Projects = () => {
     {
       id: 3,
       title: 'The Little Boy 2D Animation',
-      image: '/work-3.png',
+      image: '../assets/work-3.png',
       description: 'This is a short film project using Flash 8. It is a 2D animation short clip about the moral lesson of giving.',
       technologies: ['Flash 8', 'ibisPaint', 'Canva', 'Capcut'],
       note: 'Link to video will soon be updated.'

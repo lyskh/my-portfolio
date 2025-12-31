@@ -149,7 +149,7 @@ const About = () => {
                 <div className="skill-card">
                   <div className="card-title text-center mt-4 mb-4 h5">Web Development</div>
                   <div className="card-body text-center">
-                    <img src="/4.png" alt="Web Development" className="skill-icon" />
+                    <img src="../assets/4.png" alt="Web Development" className="skill-icon" />
                     <div className="progress-container">
                       {skills.webDev.map((skill, index) => (
                         <div key={index} className="progress-item">
@@ -177,7 +177,7 @@ const About = () => {
                 <div className="skill-card">
                   <div className="card-title text-center mt-4 mb-4 h5">Cybersecurity</div>
                   <div className="card-body text-center">
-                    <img src="/1.png" alt="Cybersecurity" className="skill-icon" />
+                    <img src="../assets/1.png" alt="Cybersecurity" className="skill-icon" />
                     <div className="skills-list">
                       <p className="card-text">SQL Injection Testing</p>
                       <p className="card-text">Ethical Hacking Basics</p>
@@ -191,7 +191,7 @@ const About = () => {
                 <div className="skill-card">
                   <div className="card-title text-center mt-4 mb-4 h5">Tools & Platforms</div>
                   <div className="card-body text-center">
-                    <img src="/2.png" alt="Tools & Platforms" className="skill-icon" />
+                    <img src="../assets/2.png" alt="Tools & Platforms" className="skill-icon" />
                     <div className="tools-grid mt-4">
                       <div>
                         <p>GitHub</p>
@@ -213,7 +213,7 @@ const About = () => {
                 <div className="skill-card">
                   <div className="card-title text-center mt-4 mb-4 h5">Design & Content Creation</div>
                   <div className="card-body text-center">
-                    <img src="/3.png" alt="Design & Content Creation" className="skill-icon" />
+                    <img src="../assets/3.png" alt="Design & Content Creation" className="skill-icon" />
                     <div className="tools-grid mt-4">
                       <div>
                         <p>Canva</p>
