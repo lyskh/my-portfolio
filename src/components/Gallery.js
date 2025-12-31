@@ -1,6 +1,24 @@
 import React, { useEffect, useRef } from 'react';
 import './Gallery.css';
-import lineImg from '../assets/line.png';
+import lineDivider from '../assets/line.png';
+import photo1 from '../assets/1.jpg';
+import photo3 from '../assets/3.jpg';
+import photo4 from '../assets/4.jpg';
+import photo5 from '../assets/5.jpg';
+import sample1 from '../assets/gallery/sample-1.png';
+import sample2 from '../assets/gallery/sample-2.png';
+import sample3 from '../assets/gallery/sample-3.png';
+import sample4 from '../assets/gallery/sample-4.png';
+import sample5 from '../assets/gallery/sample-5.png';
+import sample6 from '../assets/gallery/sample-6.png';
+import sample7 from '../assets/gallery/sample-7.png';
+import sample8 from '../assets/gallery/sample-8.png';
+import sample9 from '../assets/gallery/sample-9.png';
+import sample10 from '../assets/gallery/sample-10.png';
+import sample11 from '../assets/gallery/sample-11.png';
+import work1 from '../assets/work-1.png';
+import work2 from '../assets/work-2.png';
+import work3 from '../assets/work-3.png';
 
 const Gallery = () => {
   const galleryRef = useRef(null);
@@ -29,16 +47,16 @@ const Gallery = () => {
   }, []);
 
   const photos = [
-    { src: '../assets/1.jpg', alt: 'Photo 1' },
-    { src: '../assets/3.jpg', alt: 'Photo 2' },
-    { src: '../assets/4.jpg', alt: 'Photo 3' },
-    { src: '../assets/5.jpg', alt: 'Photo 4' },
+    { src: photo1, alt: 'Photo 1' },
+    { src: photo3, alt: 'Photo 2' },
+    { src: photo4, alt: 'Photo 3' },
+    { src: photo5, alt: 'Photo 4' },
   ];
 
   const journalSamples = [
-    { src: '../assets/sample-8.png', alt: 'Sample 1' },
-    { src: '../assets/sample-10.png', alt: 'Sample 2' },
-    { src: '../assets/sample-11.png', alt: 'Sample 3' },
+    { src: sample8, alt: 'Sample 1' },
+    { src: sample10, alt: 'Sample 2' },
+    { src: sample11, alt: 'Sample 3' },
   ];
 
   const liveProjects = [
@@ -63,7 +81,7 @@ const Gallery = () => {
     <section className="gallery-section" id="samples" ref={galleryRef}>
       <div className="container">
         <div className="section-divider">
-          <img src={lineImg} alt="Divider" />
+          <img src={lineDivider} alt="Divider" />
         </div>
         
         <h1 className="section-title">Sample Works and Photographs</h1>
@@ -87,7 +105,7 @@ const Gallery = () => {
         </div>
 
         <div className="section-divider">
-          <img src={lineImg} alt="Divider" />
+          <img src={lineDivider} alt="Divider" />
         </div>
 
         <h1 className="section-title">Live Sites</h1>
